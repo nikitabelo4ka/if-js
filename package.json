@@ -1,0 +1,31 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write *.js",
+    "lint": "eslint --debug if-js/",
+    "lint:write": "eslint --debug if-js/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitabelo4ka/if-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikitabelo4ka/if-js/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "husky": "^7.0.4",
+    "prettier": "2.6.2"
+  }
+}
