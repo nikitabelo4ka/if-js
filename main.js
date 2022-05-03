@@ -27,16 +27,16 @@ for (let i = 0; i < mas.length; i++) {
 }
 console.log(res);
 
-let mas = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < mas.length; i++) {
-  if (mas[i] > 5 && mas[i] < 10) {
-    console.log(mas[i]);
+let mas1 = [2, 5, 8, 15, 0, 6, 20, 3];
+for (let i = 0; i < mas1.length; i++) {
+  if (mas1[i] > 5 && mas1[i] < 10) {
+    console.log(mas1[i]);
   }
 }
 
-let mas = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < mas.length; i++) {
-  if (mas[i] % 2 == 0) {
-    console.log(mas[i]);
+let mas2 = [2, 5, 8, 15, 0, 6, 20, 3];
+for (let i = 0; i < mas2.length; i++) {
+  if (mas2[i] % 2 == 0) {
+    console.log(mas2[i]);
   }
 }
