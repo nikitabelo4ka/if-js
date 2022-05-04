@@ -6,7 +6,8 @@
   "scripts": {
     "prettier": "prettier --write *.html *.js",
     "lint": "eslint *.js",
-    "lint:write": "eslint *.js --fix"
+    "lint:write": "eslint *.js --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run-script lint"
+      "pre-commit": "npm run lint"
     }
   },
   "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
