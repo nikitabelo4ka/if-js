@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run-script lint"
     }
   },
   "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
