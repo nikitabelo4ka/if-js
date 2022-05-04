@@ -7,18 +7,17 @@ console.log(student);
 user = student; // Nikita
 console.log(user);
 
-let test = 1;
-test = test + 1; //2
+le test = 1;
+test = test + 1; // 2
 console.log(test);
 
-test = test + '1'; //21
+test = test + '1'; // 21
 console.log(test);
 
 test = test - 1;
-console.log(test); //20
+console.log(test); // 20
 
-Boolean(test);
-console.log(test); //20
+console.log(Boolean(test)) // 20
 
 let mas = [2, 3, 5, 8];
 let res = 1;
