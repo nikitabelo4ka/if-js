@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write *.js",
+    "prettier": "prettier --write *.html *.js",
     "lint": "eslint *.js",
     "lint:write": "eslint *.js --fix"
   },
@@ -21,6 +21,12 @@
     "hooks": {
       "pre-commit": "npm run lint"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
   },
   "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
   "devDependencies": {
