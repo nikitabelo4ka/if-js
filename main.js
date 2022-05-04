@@ -7,7 +7,7 @@ console.log(student);
 user = student; // Nikita
 console.log(user);
 
-le test = 1;
+let test = 1;
 test = test + 1; // 2
 console.log(test);
 
@@ -34,7 +34,7 @@ for (let i = 0; i < mas1.length; i++) {
 }
 
 let mas2 = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < mas2.length; i++) {
+fr (let i = 0; i < mas2.length; i++) {
   if (mas2[i] % 2 == 0) {
     console.log(mas2[i]);
   }
