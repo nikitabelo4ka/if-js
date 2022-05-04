@@ -19,7 +19,7 @@ console.log(test); // 20
 
 console.log(Boolean(test)); // 20
 
-let mas = [2, 3, 5, 8];
+le mas = [2, 3, 5, 8];
 let res = 1;
 for (let i = 0; i < mas.length; i += 1) {
   res *= mas[i];

@@ -22,12 +22,6 @@
       "pre-commit": "npm run lint"
     }
   },
-  "lint-staged": {
-    "*.js": [
-      "npm run lint:fix",
-      "git add"
-    ]
-  },
   "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
   "devDependencies": {
     "eslint": "^8.14.0",
