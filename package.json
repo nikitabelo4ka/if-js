@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write *.js",
-    "lint": "eslint --debug if-js/",
-    "lint:write": "eslint --debug if-js/ --fix"
+    "prettier": "prettier --write *.html *.js",
+    "lint": "eslint *.js",
+    "lint:write": "eslint *.js --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,18 @@
   "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
   "devDependencies": {
     "eslint": "^8.14.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.4",
     "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-jest-enzyme": "^7.1.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }
