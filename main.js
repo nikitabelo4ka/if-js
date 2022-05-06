@@ -19,7 +19,7 @@ console.log(test); // 20
 
 console.log(Boolean(test)); // 20
 
-let mas = [2, 3, 5, 8];
+const mas = [2, 3, 5, 8];
 let res = 1;
 for (let i = 0; i < mas.length; i += 1) {
   res *= mas[i];
@@ -39,3 +39,67 @@ for (let i = 0; i < mas2.length; i += 1) {
     console.log(mas2[i]);
   }
 }
+
+function palindrome(str) {
+  const arr = str.split('');
+  const arrReverse = arr.reverse();
+  const strReverse = arrReverse.join('');
+  if (str === strReverse) {
+    return true;
+  }
+  return false;
+}
+
+palindrome('шалаш');
+palindrome('дом');
+
+function min(a, b) {
+  if (a > b) {
+    return b;
+  }
+  return a;
+}
+
+min(2, 5);
+
+function max(a, y) {
+  if (a > y) {
+    return a;
+  }
+  return y;
+}
+
+max(2, 5);
+
+function min2(a, b) {
+  const minNumber = a > b ? b : a;
+  return minNumber;
+}
+
+min2(2, 5);
+min2(5, 2);
+
+function max2(a, y) {
+  const maxNumber = a > y ? a : y;
+  return maxNumber;
+}
+
+max2(2, 5);
+max2(5, 2);
+
+const mas3 = [];
+for (let i = 0; i < 10; i += 1) {
+  mas3[i] = Math.round(Math.random() * 100);
+}
+
+function zamena(num) {
+  const mas4 = num;
+  for (let i = 0; i < mas3.length; i += 1) {
+    if (String(num[i]).includes('0')) {
+      mas4[i] = String(num[i]).replaceAll('0', 'zero');
+    }
+  }
+  return num;
+}
+
+zamena(mas3);
