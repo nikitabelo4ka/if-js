@@ -44,9 +44,11 @@ function palindrome(str) {
   const arr = str.split('');
   const arrReverse = arr.reverse();
   const strReverse = arrReverse.join('');
+
   if (str === strReverse) {
     return true;
   }
+
   return false;
 }
 
@@ -73,6 +75,7 @@ max(2, 5);
 
 function min2(a, b) {
   const minNumber = a > b ? b : a;
+
   return minNumber;
 }
 
@@ -81,6 +84,7 @@ min2(5, 2);
 
 function max2(a, y) {
   const maxNumber = a > y ? a : y;
+
   return maxNumber;
 }
 
@@ -93,13 +97,17 @@ for (let i = 0; i < 10; i += 1) {
 }
 
 function zamena(num) {
-  const mas4 = num;
-  for (let i = 0; i < mas3.length; i += 1) {
-    if (String(num[i]).includes('0')) {
-      mas4[i] = String(num[i]).replaceAll('0', 'zero');
+  const result = [];
+
+  for (let i = 0; i < num.length; i += 1) {
+    if (!String(num[i]).includes('0')) {
+      result.push(num[i]);
+    } else {
+      result.push(String(num[i]).replaceAll('0', 'zero'));
     }
   }
-  return num;
+
+  return result;
 }
 
 zamena(mas3);
