@@ -118,20 +118,6 @@ zamena(mas3);
 
 // Lesson-4
 
-function sum(a) {
-  let currentSum = a;
-
-  function secondSum(b) {
-    currentSum += b;
-    return secondSum;
-  }
-  secondSum.getResult = function returnSum() {
-    return currentSum;
-  };
-  return secondSum;
-}
-console.log(sum(5)(2)(3).getResult());
-
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 
 const counters = [0, 0, 0];

@@ -1,17 +1,5 @@
-function sum(a) {
-  let currentSum = a;
+const {sum} = require('../summa');
 
-  function secondSum(b) {
-    currentSum += b;
-    return secondSum;
-  }
-  secondSum.getResult = function returnSum() {
-    return currentSum;
-  };
-  return secondSum;
-}
-console.log(sum(5)(2)(3).getResult());
-
-test('When adding new valid product, get successful configuration', () => {
-  expect(sum(5,3).toBe(8);
+test('Finding sum', () => {
+  expect(sum(3)(5).getResult()).toBe(8);
 });
