@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prettier": "prettier --write *.html tests/*.js",
+    "prettier": "prettier --write *.html *.js",
     "lint": "eslint *.js",
     "lint:write": "eslint *.js --fix",
     "prepare": "husky install"
@@ -32,6 +32,7 @@
     "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.4",
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "prettier": "2.6.2"
   },
   "dependencies": {
