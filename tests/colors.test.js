@@ -3,10 +3,13 @@
  */
 
 const counters = [0, 0, 0];
+
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+
 const p1 = document.getElementById('text1');
 const p2 = document.getElementById('text2');
 const p3 = document.getElementById('text3');
+
 const p = [p1, p2, p3];
 
 function changeColor(i) {
