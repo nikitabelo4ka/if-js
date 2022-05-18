@@ -1,6 +1,10 @@
 /**
  * @jest-environment jsdom
  */
+document.body.innerHTML =
+    '<p id="text1">Text 1</p>' +
+    '<p id="text2">Text 2</p>' +
+    '<p id="text3">Text 3</p>';
 
 const counters = [0, 0, 0];
 
@@ -22,10 +26,6 @@ function changeColor(i) {
 }
 
 describe('Checkout changeColor', () => {
-  document.body.innerHTML =
-    '<p id="text1">Text 1</p>'
-      + '<p id="text2">Text 2</p>'
-      + '<p id="text3">Text 3</p>';
 
   const element1 = document.getElementById('text1');
   const element2 = document.getElementById('text2');
@@ -37,40 +37,40 @@ describe('Checkout changeColor', () => {
   test('Expect color magenta', async () => {
     for (let i = 0; i < elements.length; i += 1) {
       elements[i].click();
-      changeColor(elements[i]);
-      const color = colors[0];
+      changeColor(i);
+      const color = elements[i].style.color;
       expect(color).toBe('magenta');
     }
   });
   test('Expect color cyan', async () => {
     for (let i = 0; i < elements.length; i += 1) {
       elements[i].click();
-      changeColor(elements[i]);
-      const color = colors[1];
+      changeColor(i);
+      const color = elements[i].style.color;
       expect(color).toBe('cyan');
     }
   });
   test('Expect color firebrick', async () => {
     for (let i = 0; i < elements.length; i += 1) {
       elements[i].click();
-      changeColor(elements[i]);
-      const color = colors[2];
+      changeColor(i);
+      const color = elements[i].style.color;
       expect(color).toBe('firebrick');
     }
   });
   test('Expect color springgreen', async () => {
     for (let i = 0; i < elements.length; i += 1) {
       elements[i].click();
-      changeColor(elements[i]);
-      const color = colors[3];
+      changeColor(i);
+      const color = elements[i].style.color;
       expect(color).toBe('springgreen');
     }
   });
   test('Expect color skyblue', async () => {
     for (let i = 0; i < elements.length; i += 1) {
       elements[i].click();
-      changeColor(elements[i]);
-      const color = colors[4];
+      changeColor(i);
+      const color = elements[i].style.color;
       expect(color).toBe('skyblue');
     }
   });
