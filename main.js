@@ -1,3 +1,5 @@
+// Lesson-2
+
 let user = 'John Doe';
 console.log(user);
 
@@ -39,6 +41,8 @@ for (let i = 0; i < mas2.length; i += 1) {
     console.log(mas2[i]);
   }
 }
+
+// Lesson-3
 
 function palindrome(str) {
   const arr = str.split('');
@@ -96,14 +100,14 @@ for (let i = 0; i < 10; i += 1) {
   mas3[i] = Math.round(Math.random() * 100);
 }
 
-function zamena(num) {
+function zamena(arrNumber) {
   const result = [];
 
-  for (let i = 0; i < num.length; i += 1) {
-    if (!String(num[i]).includes('0')) {
-      result.push(num[i]);
+  for (let i = 0; i < arrNumber.length; i += 1) {
+    if (!String(arrNumber[i]).includes('0')) {
+      result.push(arrNumber[i]);
     } else {
-      result.push(String(num[i]).replaceAll('0', 'zero'));
+      result.push(String(arrNumber[i]).replaceAll('0', 'zero'));
     }
   }
 
