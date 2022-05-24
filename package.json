@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/nikitabelo4ka/if-js#readme",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
     "eslint": "^8.14.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-jest": "^26.1.5",
@@ -36,6 +37,7 @@
     "prettier": "2.6.2"
   },
   "dependencies": {
+    "@babel/eslint-plugin": "^7.17.7",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-jest-enzyme": "^7.1.2",
     "eslint-config-prettier": "^8.5.0",
