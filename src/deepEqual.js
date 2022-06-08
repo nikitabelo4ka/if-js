@@ -31,8 +31,10 @@ function deepEqual(object1, object2) {
     const prop = properties1[i];
     const bothAreObjects = typeof object1[prop] === 'object' && typeof object2[prop] === 'object';
 
-    if ((!bothAreObjects && object1[prop] !== object2[prop])
-        || (bothAreObjects && !deepEqual(object1[prop], object2[prop]))) {
+    if (
+      (!bothAreObjects && object1[prop] !== object2[prop])
+        || (bothAreObjects && !deepEqual(object1[prop], object2[prop]))
+    ) {
       return false;
     }
   }
