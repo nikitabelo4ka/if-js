@@ -33,8 +33,7 @@ function deepEqual(object1, object2) {
 
     if (
       (!bothAreObjects && object1[prop] !== object2[prop])
-        || (bothAreObjects && !deepEqual(object1[prop], object2[prop]))
-    ) {
+        || (bothAreObjects && !deepEqual(object1[prop], object2[prop]))) {
       return false;
     }
   }
