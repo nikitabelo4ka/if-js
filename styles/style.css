@@ -1,0 +1,1840 @@
+@import url("./fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+/*main*/
+
+input {
+  margin: 0;
+  border: 0;
+  height: 57px;
+  border-radius: 8px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  background-image: url('../images/background.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 51px;
+  min-height: 935px;
+  width: 100%;
+  background-size: cover;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.header {
+  margin: 0 auto 0;
+  width: 1232px;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 205px;
+  height: 40px;
+}
+
+.logo-icon {
+  width: 205px;
+  height: 40px;
+}
+
+.right-header-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right-header-content-icons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 40px;
+}
+
+.links {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 48px;
+  width: 203px;
+  height: 30px;
+}
+
+.stays {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.stays:hover::after {
+  opacity: 1;
+}
+
+.stays::after {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  margin: 8px 0 0 4px;
+  display: block;
+  content: "";
+  background-color: #f5bd41;
+  width: 50px;
+  height: 4px;
+}
+
+.attractions {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.attractions:hover::after {
+  opacity: 1;
+}
+
+.attractions::after {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  margin: 8px 0 0 4px;
+  display: block;
+  content: "";
+  background-color: #f5bd41;
+  width: 112px;
+  height: 4px;
+}
+
+.menu-icon {
+  transition: fill 0.5s ease-out;
+  fill: #ffffff;
+  margin-left: 16px;
+}
+
+.night-icon {
+  transition: fill 0.5s ease-out;
+  fill: #ffffff;
+  margin-right: 24px;
+}
+
+.account-icon {
+  transition: fill 0.5s ease-out;
+  fill: #ffffff;
+}
+
+.menu-icon-link:hover .menu-icon {
+  fill: #f5bd41;
+}
+
+.account-icon-link:hover .account-icon {
+  fill: #f5bd41;
+}
+
+.night-icon-link:hover .night-icon {
+  fill: #f5bd41;
+}
+
+.main_title {
+  font-weight: 500;
+  font-size: 50px;
+  color: #ffffff;
+  margin: 202px 0 145px 104px;
+}
+
+label {
+  position: absolute;
+  color: #383838;
+  font-size: 18px;
+  transition: 0.2s ease all;
+}
+
+.booking-area {
+  margin: 0 auto;
+  max-width: 1232px;
+  height: 64px;
+  background-color: #ffffff;
+  border: 3px solid #f3f3f4;
+  border-radius: 8px;
+}
+
+.row-form {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.destination, .date-out, .date-in, .people-room {
+  height: 64px;
+}
+
+.search-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+
+.destination-wrap {
+  height: 64px;
+  width: 36%;
+  margin-top: -3px;
+  margin-left: -3px;
+}
+
+.destination-label {
+  left: 24px;
+  top: 20px;
+}
+
+.destination {
+  width: 100%;
+  outline: none;
+}
+
+.destination:focus {
+  border: 3px solid #f5bd41;
+}
+
+input:focus ~  .destination-label,
+input:not(:focus):valid ~ .destination-label {
+  top: -48px;
+  left: 24px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.date-in-out-wrap {
+  height: 64px;
+  width: 22%;
+  display: flex;
+  border-radius: 8px;
+  margin-top: -3px;
+}
+
+.date-in-label, .date-out-label {
+  left: 24px;
+  top: -41px;
+  width: 50%;
+  position: relative;
+}
+
+input:focus ~ .date-in-label,
+input:not(:focus):valid ~ .date-in-label{
+  top: -98px;
+  left: 24px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+input:focus ~ .date-out-label,
+input:not(:focus):valid ~ .date-out-label{
+  top: -98px;
+  left: 24px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.date-in, .date-out {
+  outline: none;
+  width: 100%;
+  max-width: 115px;
+}
+
+.date-in:focus, .date-out:focus {
+  border: 3px solid #f5bd41;
+}
+
+input[type='date'] {
+  font-size: 15px;
+  padding-inline-start: 24px;
+}
+
+.people-room-label {
+  left: 59%;
+  top: 20px;
+}
+
+.people-room {
+  margin-top: -3px;
+  outline: none;
+  width: 27%;
+}
+
+.people-room:focus + .people-room-label {
+  display: none;
+}
+
+.people-room:focus {
+  border: 3px solid #f5bd41;
+}
+
+input:focus ~ .people-room-label-label,
+input:not(:focus):valid ~ .people-room-label-label{
+  top: -98px;
+  left: 24px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.search {
+  background-color: #3077c6;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 16%;
+  height: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  margin-block-start: -3px;
+  margin-inline-end: -4px;
+}
+
+.applications-icons {
+  display: flex;
+  margin: 121px 0 120px 585px;
+}
+
+.apple-picture {
+  margin-left: 17px;
+  width: 118px;
+  height: 38.5px;
+}
+
+.google-play-picture {
+  width: 135px;
+  height: 40px;
+}
+
+/*advantages*/
+
+.advantages {
+  padding-top: 120px;
+}
+
+.advantages-container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.advantages-label {
+  display: flex;
+  justify-content: center;
+}
+
+.advantages-label-name {
+  width: 306px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.advantages-label-name::after {
+  display: block;
+  content: "";
+  background-color: #f5bd41;
+  width: 100px;
+  height: 4px;
+  border: 0;
+  margin: 20px auto 0;
+}
+
+.advantages-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 104px;
+  padding: 0 80px;
+}
+
+.element {
+  margin-bottom: 122px;
+}
+
+.elements-name {
+  margin: 52px 0 0 0;
+}
+
+.icon-1 {
+  width: 75px;
+  height: 92px;
+  display: block;
+  margin: 4px auto 0;
+}
+
+.icon-2 {
+  width: 83.5px;
+  height: 83.5px;
+  display: block;
+  margin: 8px auto 0;
+}
+
+.icon-3 {
+  width: 100px;
+  height: 66.5px;
+  display: block;
+  margin: 17px auto 0;
+}
+
+.icon-4 {
+  width: 93.5px;
+  height: 83.5px;
+  display: block;
+  margin: 4px auto 0;
+}
+
+.elements-name-1,
+.elements-name-2,
+.elements-name-3,
+.elements-name-4 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.elements-name-1 {
+  margin: 52px auto 0;
+}
+
+.elements-name-2 {
+  margin: 56px auto 0;
+}
+
+.elements-name-3 {
+  margin: 64px auto 0;
+}
+
+.elements-name-4 {
+  margin: 60px auto 0;
+}
+
+/*homes-guests-loves*/
+
+.homes-guests-loves {
+  background-color: #eaf0f9;
+  padding-top: 120px;
+}
+
+.homes-guests-loves-container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.homes-guests-loves-label {
+  display: flex;
+  justify-content: center;
+}
+
+.homes-guests-loves-label-name {
+  font-weight: 500;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.homes-guests-loves-elements {
+  width: 1257px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 105px auto 0;
+  position: relative;
+}
+
+.homes-guests-loves-element {
+  margin-bottom: 120px;
+}
+
+.arrow {
+  top: 38%;
+  left: 98%;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.hotel-icon {
+  width: 296px;
+  height: 296px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hotel-link {
+  font-size: 24px;
+  text-decoration: none;
+  color: #3077c6;
+  display: flex;
+  margin: 24px auto 0;
+  justify-content: flex-start;
+  width: 296px;
+}
+
+.hotel-location {
+  font-size: 24px;
+  color: #bfbfbf;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: flex-start;
+  width: 296px;
+}
+
+/*the-best-destinations*/
+
+.the-best-destinations {
+  padding-top: 120px;
+  position: relative;
+}
+
+.the-best-destinations-container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.the-best-destinations-label {
+  display: flex;
+  justify-content: center;
+}
+
+.the-best-destinations-label-name {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.the-best-destinations-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 104px 0 66px 100px;
+  width: calc(100% / 12 * 5 + 22px);
+  border-radius: 8px;
+  background-color: #f3f3f4;
+}
+
+.button-places-of-interest,
+.button-cities,
+.button-regions {
+  border-radius: 8px;
+  margin: 0;
+  font-size: 24px;
+  background-color: #f3f3f4;
+  border: 0;
+  height: 64px;
+}
+
+.button-regions,
+.button-cities {
+  padding: 17px 52px;
+  width: 192px;
+}
+
+.button-places-of-interest {
+  padding: 17px 25px;
+  width: 238px;
+}
+
+.button-places-of-interest:focus,
+.button-cities:focus,
+.button-regions:focus {
+  background-color: #3077c6;
+  color: #ffffff;
+}
+
+.the-best-destinations-elements {
+  display: flex;
+  width: 1257px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.maldives-icon,
+.spain-icon,
+.norway-icon,
+.island-icon {
+  width: 296px;
+  height: 296px;
+  margin: 0 auto;
+  display: block;
+}
+
+.maldives-link,
+.spain-link,
+.norway-link,
+.island-link {
+  font-size: 24px;
+  text-decoration: none;
+  color: #3077c6;
+  margin: 25px auto 0;
+  width: 296px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.maldives-element,
+.spain-element,
+.norway-element,
+.island-element {
+  position: relative;
+}
+
+.maldives-element:hover .book-now-maldives {
+  display: block;
+  top: 36%;
+  left: 30%;
+}
+
+.spain-element:hover .book-now-spain {
+  display: block;
+  top: 36%;
+  left: 30%;
+}
+
+.norway-element:hover .book-now-norway {
+  display: block;
+  top: 36%;
+  left: 30%;
+}
+
+.island-element:hover .book-now-island {
+  display: block;
+  top: 36%;
+  left: 30%;
+}
+
+.maldives-element:hover .shadow {
+  display: block;
+}
+
+.spain-element:hover .shadow {
+  display: block;
+}
+
+.norway-element:hover .shadow {
+  display: block;
+}
+
+.island-element:hover .shadow {
+  display: block;
+}
+
+.maldives-icon-wrapper,
+.spain-icon-wrapper,
+.norway-icon-wrapper,
+.island-icon-wrapper {
+  position: relative;
+}
+
+.book-now-island,
+.book-now-maldives,
+.book-now-norway,
+.book-now-spain {
+  cursor: pointer;
+  display: none;
+  width: 128px;
+  height: 48px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #3077c6;
+  border: 1px solid #3077c6;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.shadow {
+  top: 0;
+  left: 2.5%;
+  display: none;
+  background-color: rgba(56, 56, 56, 0.4);
+  width: 296px;
+  height: 296px;
+  position: absolute;
+}
+
+.arrow-h {
+  position: absolute;
+  top: 69%;
+  left: 49%;
+  width: 40px;
+  height: 40px;
+}
+
+.the-best-destinations-arrow {
+  display: none;
+}
+
+.offer {
+  position: relative;
+  display: flex;
+  background-color: #eaf0f9;
+  margin: 201px auto 0;
+  width: calc(100% / 12 * 10 + 32px);
+}
+
+.sign-up {
+  margin: 51px 0 0 24px;
+}
+
+.sign-up-text {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.sign-up-button {
+  margin-top: 21px;
+  border-radius: 8px;
+  border: 1px solid #3077c6;
+  background-color: #ffffff;
+  color: #3077c6;
+  font-size: 18px;
+  width: 128px;
+  height: 48px;
+}
+
+.user-icon {
+  width: 86px;
+  height: 86px;
+  margin: 57px 0 57px 24px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10%;
+  left: 95.5%;
+  width: 26px;
+  height: 26px;
+}
+
+/*guests-reviews*/
+
+.guests-reviews {
+  padding-top: 120px;
+  margin-bottom: 120px;
+}
+
+.guests-reviews-container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.guests-reviews-label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 104px;
+}
+
+.guests-reviews-label-mobile {
+  display: flex;
+  justify-content: center;
+}
+
+.guests-reviews-label-name {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.guests-reviews-label-name-mobile {
+  display: none;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.guests-reviews-elements {
+  position: relative;
+  display: flex;
+  width: 1257px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.ubud-bali-resort-spa-element,
+.king-kong-hostel-element {
+  width: calc(100% / 12 * 4 - 19px);
+  background-color: #eaf0f9;
+  position: relative;
+  margin-right: 16px;
+}
+
+.rokoko-hotel-element {
+  width: calc(100% / 12 * 4 - 19px);
+  background-color: #eaf0f9;
+  position: relative;
+}
+
+.ubud-bali-resort-spa-icon,
+.rokoko-hotel-icon,
+.king-kong-hostel-icon {
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ubud-bali-resort-spa-link,
+.ubud-bali-resort-spa-location,
+.rokoko-hotel-link,
+.rokoko-hotel-location,
+.king-kong-hostel-link,
+.king-kong-hostel-location {
+  text-decoration: none;
+  font-size: 18px;
+  color: #3077c6;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.bali-shadow,
+.rokoko-shadow,
+.king-kong-shadow {
+  font-size: 18px;
+  color: #ffffff;
+  padding: 16px 0 11px 24px;
+  position: absolute;
+  width: 400px;
+  height: 48px;
+  background-color: rgba(56, 56, 56, 0.7);
+  top: 352px;
+  left: 0;
+}
+
+.bali-shadow-usd,
+.rokoko-shadow-usd,
+.king-kong-shadow-usd {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ubud-bali-resort-spa-wrapper,
+.rokoko-hotel-wrapper,
+.king-kong-hostel-wrapper {
+  width: 355px;
+  display: flex;
+  margin: 24px 24px 29px;
+}
+
+.rating-bali {
+  margin-left: 90px;
+}
+
+.rating-rokoko {
+  margin-left: 141px;
+}
+
+.rating-king-kong {
+  margin-left: 79px;
+}
+
+.reviews-bali,
+.reviews-rokoko,
+.reviews-kink-kong {
+  font-size: 14px;
+  color: #bfbfbf;
+  margin-top: 8px;
+}
+
+.score-bali,
+.score-king-kong {
+  margin-left: 35px;
+}
+
+.score-rokoko {
+  margin-left: 27px;
+}
+
+.score-bali,
+.score-rokoko,
+.score-king-kong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  width: 48px;
+  height: 32px;
+  background-color: #10367c;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.bali-feedback-user,
+.rokoko-feedback-user,
+.king-kong-feedback-user {
+  display: flex;
+  margin-left: 29.5px;
+}
+
+.bali-feedback-account,
+.rokoko-feedback-account,
+.king-kong-feedback-account {
+  width: 53.5px;
+  height: 53.5px;
+}
+
+.bali-feedback-account-name-country,
+.king-kong-feedback-account-name-country,
+.rokoko-feedback-account-name-country {
+  margin-left: 21.5px;
+}
+
+.bali-feedback-account-name,
+.king-kong-feedback-account-name,
+.rokoko-feedback-account-name {
+  font-size: 18px;
+}
+
+.bali-feedback-account-country,
+.king-kong-feedback-account-country,
+.rokoko-feedback-account-country {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #bfbfbf;
+}
+
+.king-kong-feedback-text,
+.bali-feedback-text,
+.rokoko-feedback-text {
+  font-size: 18px;
+  margin: 24px;
+}
+
+.guests-reviews-arrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 25%;
+  left: 95%;
+}
+
+.navigation-mobile {
+  display: none;
+}
+
+/*footer*/
+
+.footer {
+  background: #10367c;
+}
+
+.footer-container {
+  flex-wrap: wrap;
+  display: flex;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: none;
+}
+
+.lists {
+  width: 1440px;
+  display: flex;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.list-about,
+.list-property_types,
+.list-support {
+  list-style: none;
+  padding-top: 120px;
+}
+
+.list-about {
+  padding-left: 104px;
+}
+
+.list-property_types {
+  padding-left: 40px;
+}
+
+.list-support {
+  padding-left: 95px;
+}
+
+.about,
+.property_types,
+.support {
+  font-weight: 500;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.elem {
+  margin-top: 24px;
+}
+
+.signature {
+  color: #ffffff;
+  margin: 120px 0 120px 103px;
+  font-size: 12px;
+}
+
+/*media-queries*/
+
+@media screen and (min-width: 1440px) {
+  /*For Desktop*/
+
+  .menu-icon {
+    display: none;
+  }
+
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  /*main*/
+  .main {
+    min-height: 750px;
+  }
+
+  .main_title {
+    margin: 120px 0 0 auto;
+    font-size: 35px;
+  }
+
+  .header {
+    margin: 0 auto;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .booking-area {
+    margin: 100px auto 0;
+  }
+
+  .destination-label,
+  .date-in-label,
+  .date-out-label,
+  .people-room-label,
+  .search {
+    font-size: 15px;
+    display: block;
+  }
+
+  input[type='date'], input[type='text'] {
+    font-size: 12px;
+  }
+
+  .applications-icons {
+    margin: 50px auto 0;
+  }
+
+  /*homes-guests-loves*/
+
+  .homes-guests-loves-element {
+    margin-bottom: 60px;
+  }
+
+  /*the-best-destinations*/
+
+  .norway-element,
+  .island-element {
+    margin-top: 40px;
+  }
+
+  .maldives-element:hover .book-now-maldives {
+    display: none;
+  }
+
+  .spain-element:hover .book-now-spain {
+    display: none;
+  }
+
+  .norway-element:hover .book-now-norway {
+    display: none;
+  }
+
+  .island-element:hover .book-now-island {
+    display: none;
+  }
+
+  .maldives-element:hover .shadow {
+    display: none;
+  }
+
+  .spain-element:hover .shadow {
+    display: none;
+  }
+
+  .norway-element:hover .shadow {
+    display: none;
+  }
+
+  .island-element:hover .shadow {
+    display: none;
+  }
+
+  .the-best-destinations-buttons {
+    margin: 104px auto 66px;
+  }
+
+  .offer {
+    margin-top: 120px;
+  }
+
+  .arrow {
+    top: 45%;
+    left: 89%;
+  }
+
+  .arrow-h {
+    top: 79%;
+  }
+
+  .of-interest {
+    display: none;
+  }
+
+  /*guests-reviews*/
+
+  .ubud-bali-resort-spa-element,
+  .king-kong-hostel-element,
+  .rokoko-hotel-element {
+    margin: 0 auto;
+  }
+
+  .ubud-bali-resort-spa-element,
+  .king-kong-hostel-element {
+    width: calc(100% / 12 * 5 + 50px);
+  }
+
+  .rokoko-hotel-element {
+    margin-top: 40px;
+    width: calc(100% / 12 * 5 + 80px);
+  }
+
+  .ubud-bali-resort-spa-wrapper,
+  .bali-feedback,
+  .king-kong-hostel-wrapper,
+  .king-kong-feedback,
+  .rokoko-hotel-wrapper {
+    margin: 24px auto 29px;
+    width: 370px;
+  }
+
+  .bali-feedback,
+  .king-kong-feedback,
+  .rokoko-feedback {
+    margin: 0 auto;
+  }
+
+  .rokoko-feedback {
+    width: 355px;
+  }
+
+  .ubud-bali-resort-spa-icon,
+  .king-kong-hostel-icon {
+    width: 370px;
+    height: 370px;
+  }
+
+  .bali-shadow,
+  .rokoko-shadow,
+  .king-kong-shadow {
+    display: none;
+  }
+
+  .col-m-1 {
+    width: 8.33%;
+  }
+
+  .col-m-2 {
+    width: 16.66%;
+  }
+
+  .col-m-3 {
+    width: 25%;
+  }
+
+  .col-m-4 {
+    width: 33.33%;
+  }
+
+  .col-m-5 {
+    width: 41.66%;
+  }
+
+  .col-m-6 {
+    width: 50%;
+  }
+
+  .col-m-7 {
+    width: 58.33%;
+  }
+
+  .col-m-8 {
+    width: 66.66%;
+  }
+
+  .col-m-9 {
+    width: 75%;
+  }
+
+  .col-m-10 {
+    width: 83.33%;
+  }
+
+  .col-m-11 {
+    width: 91.66%;
+  }
+
+  .col-m-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*main*/
+
+  .main {
+    background-size: cover;
+    padding: 0;
+    min-height: 590px;
+  }
+
+  .main-container {
+    justify-content: center;
+  }
+
+  .main_title {
+    width: 350px;
+    padding: 52px 12px 0 12px;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+
+  .header {
+    margin: 0;
+    padding: 12px 12px 0 12px;
+  }
+
+  .right-header-content-icons {
+    padding-right: 12px;
+  }
+
+  .menu-icon {
+    width: 24px;
+    height: 16px;
+    display: block;
+  }
+
+  .logo-icon {
+    width: 122px;
+    height: 24px;
+  }
+
+  .night-icon {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .account-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .booking-area {
+    height: 232px;
+    background: #f5bd41;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 32px;
+    padding: 8px;
+    margin-top: 31px;
+  }
+
+  .row-form {
+    display: block;
+    margin-block-start: 0;
+  }
+
+  .search-icon {
+    display: block;
+    top: 8%;
+    left: 2%;
+  }
+
+  .destination, .date-out, .date-in, .people-room {
+    height: 48px;
+  }
+
+  input {
+    height: 48px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-top: 12px;
+    padding-left: 36px;
+    color: #383838;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  .destination-wrap {
+    height: 48px;
+    width: 100%;
+  }
+
+  .destination-label {
+    left: 36px;
+    top: 15px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  input:focus ~ .destination-label,
+  input:not(:focus):valid ~ .destination-label {
+    top: 6px;
+    left: 36px;
+    font-size: 12px;
+    color: #383838;
+    opacity: 1;
+  }
+
+  .date-in-out-wrap {
+    margin-top: 8px;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+  }
+
+  .date-in-wrap, .date-out-wrap {
+    width: 49%;
+  }
+
+  .date-in-label,
+  .date-out-label {
+    left: 36px;
+    top: -42px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  input:focus ~ .date-in-label,
+  input:not(:focus):valid ~ .date-in-label {
+    top: -52px;
+    left: 36px;
+    font-size: 12px;
+    color: #383838;
+    opacity: 1;
+  }
+
+  input:focus ~ .date-out-label,
+  input:not(:focus):valid ~ .date-out-label {
+    top: -52px;
+    left: 36px;
+    font-size: 12px;
+    color: #383838;
+    opacity: 1;
+  }
+
+  .date-in, .date-out {
+    max-width: 337px;
+  }
+
+  input[type="date"] {
+    align-items: center;
+    display: inline-flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding-inline-start: 36px;
+    border: 0;
+  }
+
+  .people-room {
+    margin-top: 8px;
+    padding-top: 0;
+  }
+
+  .people-room-label {
+    left: 36px;
+    top: 129px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  input:focus ~ .people-room-label,
+  input:not(:focus):valid ~ .people-room-label {
+    top: 115px;
+    left: 36px;
+    font-size: 12px;
+    color: #383838;
+    opacity: 1;
+  }
+
+  .search {
+    font-size: 19px;
+    height: 48px;
+    border-radius: 4px;
+    margin-block-start: 0;
+  }
+
+  .applications-icons {
+    justify-content: center;
+    margin: 32px 0 0;
+  }
+
+  /*advantages*/
+
+  .advantages {
+    padding-top: 24px;
+  }
+
+  .advantages-elements {
+    margin-top: 32px;
+  }
+
+  .advantages-label {
+    font-size: 28px;
+  }
+
+  .advantages-label-name::after {
+    display: none;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .elem {
+    display: none;
+  }
+
+  .element {
+    margin-bottom: 35px;
+  }
+
+  .elements-name-1,
+  .elements-name-2,
+  .elements-name-3,
+  .elements-name-4 {
+    font-size: 15px;
+  }
+
+  .elements-name-1 {
+    margin-top: 19px;
+  }
+
+  .elements-name-2 {
+    margin-top: 22px;
+  }
+
+  .elements-name-3 {
+    margin-top: 27.5px;
+  }
+
+  .elements-name-4 {
+    margin-top: 24.5px;
+  }
+
+  /*homes-guests-loves*/
+
+  .homes-guests-loves {
+    padding-top: 40px;
+  }
+
+  .homes-guests-loves-label-name {
+    font-size: 28px;
+  }
+
+  .homes-guests-loves-elements {
+    margin-top: 32px;
+  }
+
+  .hotel-icon {
+    width: 156px;
+    height: 155px;
+  }
+
+.homes-guests-loves-element {
+    margin: 40px auto;
+    width: calc(100% / 12 * 6 - 24px);
+  }
+
+  .hotel-location,
+  .hotel-link {
+    font-size: 12px;
+    width: 156px;
+    margin: 8px auto 0;
+  }
+
+  /*the-best-destinations*/
+
+  .the-best-destinations {
+    padding-top: 40px;
+  }
+
+  .the-best-destinations-elements {
+    position: relative;
+  }
+
+  .the-best-destinations-arrow {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    display: block;
+    top: 62.5%;
+    left: 91%;
+  }
+
+  .the-best-destinations-label-name {
+    font-size: 28px;
+  }
+
+  .maldives-element:hover .shadow {
+    display: none;
+  }
+
+  .spain-element:hover .shadow {
+    display: none;
+  }
+
+  .bali-shadow,
+  .rokoko-shadow,
+  .king-kong-shadow {
+    display: none;
+  }
+
+  .arrow {
+    width: 28px;
+    height: 28px;
+    left: 89%;
+    top: 47%;
+  }
+
+  .of-interest {
+    display: none;
+  }
+
+  .the-best-destinations-buttons {
+    margin: 32px auto 24px;
+    background-color: transparent;
+    width: calc(100% / 12 * 10 + 29px);
+  }
+
+  .button-regions,
+  .button-cities,
+  .button-places-of-interest {
+    font-size: 19px;
+    width: 99px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 1px solid #f3f3f4;
+  }
+
+  .button-regions {
+    margin-right: 16px;
+    padding: 5px 15px;
+  }
+
+  .button-cities {
+    margin-right: 16px;
+    padding: 5px 25px;
+  }
+
+  .button-places-of-interest {
+    padding: 5px 20px;
+  }
+
+  .norway-element,
+  .island-element {
+    display: none;
+  }
+
+  .maldives-icon,
+  .spain-icon {
+    width: 156px;
+    height: 156px;
+  }
+
+  .maldives-link,
+  .spain-link {
+    width: 156px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .maldives-element,
+  .spain-element {
+    width: calc(100% / 12 * 6 - 24px);
+    margin-bottom: 40px;
+  }
+
+  .maldives-element {
+    margin-left: 17px;
+    margin-right: 16px;
+  }
+
+  .maldives-element:hover .book-now-maldives {
+    display: none;
+  }
+
+  .spain-element:hover .book-now-spain {
+    display: none;
+  }
+
+  .offer {
+    display: none;
+  }
+
+  .arrow-h {
+    display: none;
+  }
+
+  /*footer*/
+
+  .footer-logo {
+    height: 19px;
+    display: block;
+    margin: 40px auto 40px;
+  }
+
+  .footer-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .lists {
+    text-align: center;
+    width: 225px;
+  }
+
+  .about,
+  .property_types,
+  .support {
+    text-decoration: underline;
+    font-size: 15px;
+  }
+
+  .about,
+  .property_types {
+    margin-right: 8px;
+  }
+
+  .list-about,
+  .list-support,
+  .list-property_types {
+    padding: 0;
+  }
+
+  .signature {
+    text-align: center;
+    margin: 32px 0 40px;
+  }
+
+  /*guests-reviews*/
+
+  .guests-reviews {
+    padding-top: 0;
+    margin: 0;
+  }
+
+  .guests-reviews-label {
+    display: none;
+  }
+
+  .guests-reviews-label-name {
+    display: none;
+  }
+
+  .guests-reviews-label-name-mobile {
+    font-size: 28px;
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  .king-kong-hostel-element,
+  .rokoko-hotel-element,
+  .guests-reviews-arrow {
+    display: none;
+  }
+
+  .ubud-bali-resort-spa-element {
+    position: relative;
+    padding: 40px 0 0 0;
+    margin: 0;
+  }
+
+  .bali-feedback-user {
+    width: 327px;
+    margin: 0 auto;
+  }
+
+  .bali-feedback-account {
+    width: 43.5px;
+    height: 43.5px;
+  }
+
+  .bali-feedback-account-name-country {
+    margin-left: 13px;
+    font-size: 15px;
+  }
+
+  .bali-feedback-account-name,
+  .ubud-bali-resort-spa-link,
+  .ubud-bali-resort-spa-location,
+  .score-bali {
+    font-size: 15px;
+  }
+
+  .ubud-bali-resort-spa-icon {
+    width: 327px;
+    height: 325px;
+  }
+
+  .reviews-bali {
+    font-size: 12px;
+  }
+
+  .score-bali {
+    width: 39.5px;
+    height: 26px;
+  }
+
+  .ubud-bali-resort-spa-wrapper {
+    margin: 12px auto 16.5px;
+    width: 327px;
+  }
+
+  .rating-bali {
+    margin-left: 105px;
+  }
+
+  .bali-feedback-text {
+    width: 327px;
+    margin: 24px auto 80px;
+    font-size: 15px;
+  }
+
+  .navigation-mobile {
+    width: 56px;
+    height: 8px;
+    position: absolute;
+    top: 95%;
+    left: 45%;
+    display: block;
+  }
+
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
