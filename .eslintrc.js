@@ -12,6 +12,7 @@ module.exports = {
     'no-unused-vars': "off",
     'no-console': 'off',
     'jest/no-deprecated-functions': 'off',
+    'no-param-reassign': 'off',
   },
   parserOptions: {
     ecmaVersion: 6,
