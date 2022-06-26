@@ -270,11 +270,11 @@ input[type='date'] {
   width: 27%;
 }
 
-.people-room:focus + .people-room-label {
-  display: none;
+.people-room:focus {
+  border: 3px solid #f5bd41;
 }
 
-.people-room:focus {
+.people-room-active {
   border: 3px solid #f5bd41;
 }
 
@@ -284,6 +284,93 @@ input:not(:focus):valid ~ .people-room-label-label{
   left: 24px;
   color: #ffffff;
   opacity: 1;
+}
+
+.filtres {
+  width: 259px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 0 10px 0;
+  margin: 12px 0 0 776px;
+}
+
+.filter-wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+}
+
+.filter-input {
+  padding: 0;
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.filter-input:focus-visible {
+  outline: none;
+}
+
+.filter-label {
+  margin: 0 61px 0 22px;
+  font-size: 16px;
+}
+
+.filter-counter {
+  margin-left: 129px;
+  display: flex;
+}
+
+.filter-button {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #3077C6;
+  color: #3077C6;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+}
+
+.unactive {
+  display: none;
+}
+
+.button-unactive {
+  border: 1px solid #CECECE;
+  color: #CECECE;
+}
+
+.button-unactive:hover {
+  cursor: default;
+}
+
+.children-age-text {
+  width: 215px;
+  font-size: 12px;
+  margin-left: 19px;
+  margin-top: 16px;
+}
+
+.select-children-age {
+  width: 99px;
+  height: 30px;
+  border: 1px solid #3077C6;
+  font-size: 12px;
+  margin: 12px 0 0 18px;
+}
+
+.select-children-age:focus-visible {
+  outline: none;
 }
 
 .search {
