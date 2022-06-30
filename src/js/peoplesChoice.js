@@ -2,8 +2,6 @@ const filtres = document.getElementById('filtres');
 
 const peoplesInput = document.getElementById('people-room');
 
-const peoples = document.getElementById('peoples-label');
-
 const filterInputs = document.querySelectorAll('.filter-input');
 
 document.addEventListener('click', (event) => {
@@ -45,12 +43,12 @@ document.addEventListener('click', (event) => {
       peoplesInput.classList.remove('people-room-active');
       filtres.classList.add('unactive');
     }
-    peoples.innerHTML = `${filterInputs[0].value} Adults &#8212; ${filterInputs[1].value} Children &#8212; ${filterInputs[2].value} Rooms`;
+    peoplesInput.setAttribute('value', `${filterInputs[0].value} Adults — ${filterInputs[1].value} Children — ${filterInputs[2].value} Rooms`);
   }
 });
 
 filterInputs.forEach((item) => item.addEventListener('input', () => {
-  peoples.innerHTML = `${filterInputs[0].value} Adults &#8212; ${filterInputs[1].value} Children &#8212; ${filterInputs[2].value} Rooms`;
+  peoplesInput.setAttribute('value', `${filterInputs[0].value} Adults — ${filterInputs[1].value} Children — ${filterInputs[2].value} Rooms`);
 }));
 
 filterInputs.forEach((item) => item.addEventListener('focusout', (event) => {
