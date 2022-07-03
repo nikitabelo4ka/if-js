@@ -22,7 +22,7 @@ input {
 .main {
   display: flex;
   justify-content: center;
-  background-image: url('../images/background.png');
+  background-image: url('../images/background.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   padding-top: 51px;
@@ -259,11 +259,6 @@ input[type='date'] {
   padding-inline-start: 24px;
 }
 
-.people-room-label {
-  left: 59%;
-  top: 20px;
-}
-
 .people-room {
   margin-top: -3px;
   outline: none;
@@ -276,14 +271,6 @@ input[type='date'] {
 
 .people-room-active {
   border: 3px solid #f5bd41;
-}
-
-input:focus ~ .people-room-label-label,
-input:not(:focus):valid ~ .people-room-label-label{
-  top: -98px;
-  left: 24px;
-  color: #ffffff;
-  opacity: 1;
 }
 
 .filtres {
@@ -508,29 +495,29 @@ input:not(:focus):valid ~ .people-room-label-label{
 
 /*homes-guests-loves*/
 
-.homes-guests-loves {
+.homes-guests-loves, .available-hotels {
   background-color: #eaf0f9;
   padding-top: 120px;
 }
 
-.homes-guests-loves-container {
+.homes-guests-loves-container, .available-hotels-container {
   width: 1440px;
   margin: 0 auto;
 }
 
-.homes-guests-loves-label {
+.homes-guests-loves-label, .available-hotels-label {
   display: flex;
   justify-content: center;
 }
 
-.homes-guests-loves-label-name {
+.homes-guests-loves-label-name, .available-hotels-label-name {
   font-weight: 500;
   font-size: 40px;
   display: flex;
   justify-content: center;
 }
 
-.homes-guests-loves-elements {
+.homes-guests-loves-elements, .available-hotels-elements {
   width: 1257px;
   display: flex;
   flex-wrap: wrap;
@@ -538,7 +525,7 @@ input:not(:focus):valid ~ .people-room-label-label{
   position: relative;
 }
 
-.homes-guests-loves-element {
+.homes-guests-loves-element, .available-hotels-element {
   margin-bottom: 120px;
 }
 
@@ -550,14 +537,14 @@ input:not(:focus):valid ~ .people-room-label-label{
   height: 40px;
 }
 
-.hotel-icon {
+.hotel-icon, .available-hotels-icon {
   width: 296px;
   height: 296px;
   display: block;
   margin: 0 auto;
 }
 
-.hotel-link {
+.hotel-link, .available-hotels-link {
   font-size: 24px;
   text-decoration: none;
   color: #3077c6;
@@ -567,7 +554,7 @@ input:not(:focus):valid ~ .people-room-label-label{
   width: 296px;
 }
 
-.hotel-location {
+.hotel-location, .available-hotels-location {
   font-size: 24px;
   color: #bfbfbf;
   margin: 24px auto 0;
@@ -1155,7 +1142,6 @@ input:not(:focus):valid ~ .people-room-label-label{
   .destination-label,
   .date-in-label,
   .date-out-label,
-  .people-room-label,
   .search {
     font-size: 15px;
     display: block;
@@ -1506,22 +1492,6 @@ input:not(:focus):valid ~ .people-room-label-label{
   .people-room {
     margin-top: 8px;
     padding-top: 0;
-  }
-
-  .people-room-label {
-    left: 36px;
-    top: 129px;
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  input:focus ~ .people-room-label,
-  input:not(:focus):valid ~ .people-room-label {
-    top: 115px;
-    left: 36px;
-    font-size: 12px;
-    color: #383838;
-    opacity: 1;
   }
 
   .search {

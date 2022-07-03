@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prettier": "prettier --write *.html src/js/*.js",
-    "lint": "eslint src/js/*.js",
-    "lint:write": "eslint src/*.js --fix",
+    "prettier": "prettier --write *.html src/js/search.js",
+    "lint": "eslint src/js/search.js",
+    "lint:write": "eslint src/sarch.js --fix",
     "prepare": "husky install"
   },
   "repository": {

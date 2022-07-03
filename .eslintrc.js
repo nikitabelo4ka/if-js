@@ -8,6 +8,7 @@ module.exports = {
   plugins: ['babel', 'import', 'react'],
   rules: {
     'no-restricted-syntax': 'off',
+    'no-alert': 'off',
     'max-classes-per-file': 'off',
     'no-unused-vars': "off",
     'no-console': 'off',
