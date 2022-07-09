@@ -5,32 +5,28 @@ async function arrFromFetch() {
   return response.json();
 }
 
+const arrayOfHotels = sessionStorage.getItem('arrayOfHotels');
+
+function addHotels(hotelInfo) {
+  hotelInfo.forEach((item) => {
+    const homesGuestsLoves = document.getElementById('homes-guests-loves');
+    const newDiv = document.createElement('div');
+    newDiv.className = 'homes-guests-loves-element col-m-6 col-3';
+    homesGuestsLoves.appendChild(newDiv);
+    newDiv.innerHTML = `<img class="hotel-icon" src="${item.imageUrl}" alt="${item.name} image">
+                          <a class="hotel-link" href="">${item.name}</a>
+                          <p class="hotel-location">${item.city}, ${item.country}</p>`;
+  });
+}
+
 async function checkSessionStorage() {
-  if (sessionStorage.getItem('arrayOfHotels') === null) {
+  if (arrayOfHotels === null) {
     const info = await arrFromFetch();
     sessionStorage.setItem('arrayOfHotels', JSON.stringify(info));
-    const result = sessionStorage.getItem('arrayOfHotels');
-    JSON.parse(result).forEach((item) => {
-      const homesGuestsLoves = document.getElementById('homes-guests-loves');
-      const newDiv = document.createElement('div');
-      newDiv.className = 'homes-guests-loves-element col-m-6 col-3';
-      homesGuestsLoves.appendChild(newDiv);
-      newDiv.innerHTML = `<img class="hotel-icon" src="${item.imageUrl}" alt="${item.name} image">
-                          <a class="hotel-link" href="">${item.name}</a>
-                          <p class="hotel-location">${item.city}, ${item.country}</p>`;
-    });
-  } else {
-    const resultFromStorage = sessionStorage.getItem('arrayOfHotels');
-    JSON.parse(resultFromStorage).forEach((item) => {
-      const newDiv = document.createElement('div');
-      const homesGuestsLoves = document.getElementById('homes-guests-loves');
-      newDiv.className = 'homes-guests-loves-element col-m-6 col-3';
-      homesGuestsLoves.appendChild(newDiv);
-      newDiv.innerHTML = `<img class="hotel-icon" src="${item.imageUrl}" alt="${item.name} image">
-                          <a class="hotel-link" href="">${item.name}</a>
-                          <p class="hotel-location">${item.city}, ${item.country}</p>`;
-    });
+    addHotels(info);
+    return;
   }
+  addHotels(JSON.parse(arrayOfHotels));
 }
 
 checkSessionStorage().catch((error) => console.log(error.massage));
