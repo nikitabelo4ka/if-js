@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prettier": "prettier --write *.html src/js/sessionstorage.js",
-    "lint": "eslint src/js/sessionstorage.js",
-    "lint:write": "eslint src/js/sessionstorage.js --fix",
+    "prettier": "prettier --write *.html src/formData/form.js",
+    "lint": "eslint src/formData/form.js",
+    "lint:write": "eslint src/formData/form.js --fix",
     "prepare": "husky install"
   },
   "repository": {
