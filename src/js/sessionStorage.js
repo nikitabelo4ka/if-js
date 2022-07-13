@@ -19,14 +19,29 @@ function addHotels(hotelInfo) {
   });
 }
 
+function sort(arr) {
+  for (let i = 0, endI = arr.length; i < endI; i += 1) {
+    let toggle = false;
+
+    for (let j = 0, endJ = endI - 1; j < endJ; j += 1) {
+      if (arr[j].name > arr[j + 1].name) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        toggle = true;
+      }
+    }
+    if (!toggle) break;
+  }
+  return arr;
+}
+
 async function checkSessionStorage() {
   if (arrayOfHotels === null) {
     const info = await arrFromFetch();
     sessionStorage.setItem('arrayOfHotels', JSON.stringify(info));
-    addHotels(info);
+    addHotels(sort(info));
     return;
   }
-  addHotels(JSON.parse(arrayOfHotels));
+  addHotels(sort(JSON.parse(arrayOfHotels)));
 }
 
 checkSessionStorage().catch((error) => console.log(error.massage));

@@ -20,6 +20,7 @@ document.addEventListener('click', (event) => {
         if (action === 'less') {
           if (Number(input.value) > Number(input.dataset.min)) {
             input.value = Number(input.value) - 1;
+            input.setAttribute('value', Number(input.value) - 1);
             const more = document.getElementById(`${inputId}-more`);
             more.classList.remove('button-unactive');
             if (Number(input.value) === Number(input.dataset.min)) {
@@ -31,6 +32,7 @@ document.addEventListener('click', (event) => {
         if (action === 'more') {
           if (Number(input.value) < Number(input.dataset.max)) {
             input.value = Number(input.value) + 1;
+            input.setAttribute('value', Number(input.value) + 1);
             const less = document.getElementById(`${inputId}-less`);
             less.classList.remove('button-unactive');
             if (Number(input.value) === Number(input.dataset.max)) {
