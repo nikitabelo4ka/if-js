@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prettier": "prettier --write *.html src/js/searchHotels.js",
-    "lint": "eslint src/js/searchHotels.js",
-    "lint:write": "eslint src/js/searchHotels.js --fix",
+    "prettier": "prettier --write *.html src/modules/*.js",
+    "lint": "eslint src/modules/*.js",
+    "lint:write": "eslint src/modules/*.js --fix",
     "prepare": "husky install"
   },
   "repository": {

@@ -1,3 +1,5 @@
+import { makeStartState } from '../modules/makeStartState.js';
+
 const form1 = document.getElementById('inputs');
 const adultsInput = document.getElementById('adults');
 const childrensAges = document.getElementsByClassName('select-children-age fil-el');
@@ -6,21 +8,9 @@ const destinationInput = document.getElementById('destination');
 
 const API1 = 'https://fe-student-api.herokuapp.com/api';
 const PATH1 = 'hotels?search=';
-
 let hotelsExist = false;
-const availableHotelsWrap = document.getElementsByClassName('available-hotels')[0];
 
-function makeStartState() {
-  if (hotelsExist) {
-    const oldAvailableHotels = document.getElementById('available-hotels');
-    oldAvailableHotels.parentNode.removeChild(oldAvailableHotels);
-    const newAvailableHotels = document.createElement('div');
-    newAvailableHotels.classList = 'available-hotels-elements col-m-12 col-s-12';
-    newAvailableHotels.id = 'available-hotels';
-    availableHotelsWrap.appendChild(newAvailableHotels);
-    hotelsExist = false;
-  }
-}
+const availableHotelsWrap = document.getElementsByClassName('available-hotels')[0];
 
 form1.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -43,7 +33,7 @@ form1.addEventListener('submit', (event) => {
       if (result.length === 0) {
         availableHotelsWrap.classList.add('unactive');
 
-        makeStartState();
+        hotelsExist = makeStartState(hotelsExist);
 
         alert('Nothing was found for your query');
 
@@ -51,7 +41,7 @@ form1.addEventListener('submit', (event) => {
       }
       availableHotelsWrap.classList.remove('unactive');
 
-      makeStartState();
+      hotelsExist = makeStartState(hotelsExist);
 
       result.forEach((item) => {
         const availableHotels = document.getElementById('available-hotels');
@@ -62,7 +52,6 @@ form1.addEventListener('submit', (event) => {
                             <a class="available-hotels-link" href="">${item.name}</a>
                             <p class="available-hotels-location">${item.city}, ${item.country}</p>`;
       });
-
-      hotelsExist = true;
     });
+    hotelsExist = true;
 });
