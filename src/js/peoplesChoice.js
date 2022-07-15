@@ -1,4 +1,4 @@
-import { addAgeSelect } from '../modules/addAgeSelect.js';
+import addAgeSelect from '../modules/addAgeSelect.js';
 
 const filtres = document.getElementById('filtres');
 

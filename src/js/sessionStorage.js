@@ -1,5 +1,5 @@
-import { addHotels } from '../modules/addHotelsInfo.js';
-import { sort } from '../modules/sort.js';
+import addHotels from '../modules/addHotelsInfo.js';
+import sort from '../modules/sort.js';
 
 async function arrFromFetch() {
   const API = 'https://fe-student-api.herokuapp.com/api';

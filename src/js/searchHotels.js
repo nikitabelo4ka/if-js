@@ -1,4 +1,4 @@
-import { makeStartState } from '../modules/makeStartState.js';
+import makeStartState from '../modules/makeStartState.js';
 
 const form1 = document.getElementById('inputs');
 const adultsInput = document.getElementById('adults');

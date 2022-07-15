@@ -1,4 +1,4 @@
-function sort(arr) {
+export default function sort(arr) {
   for (let i = 0, endI = arr.length; i < endI; i += 1) {
     let toggle = false;
 
@@ -12,5 +12,3 @@ function sort(arr) {
   }
   return arr;
 }
-
-export default { sort };

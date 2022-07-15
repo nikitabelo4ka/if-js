@@ -1,4 +1,4 @@
-function makeStartState(hotelsExist) {
+export default function makeStartState(hotelsExist) {
   if (hotelsExist) {
     const availableHotelsWrap = document.getElementsByClassName('available-hotels')[0];
     const oldAvailableHotels = document.getElementById('available-hotels');
@@ -10,5 +10,3 @@ function makeStartState(hotelsExist) {
   }
   return false;
 }
-
-export default { makeStartState };

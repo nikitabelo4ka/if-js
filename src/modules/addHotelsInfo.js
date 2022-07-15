@@ -1,4 +1,4 @@
-function addHotels(hotelInfo) {
+export default function addHotels(hotelInfo) {
   hotelInfo.forEach((item) => {
     const homesGuestsLoves = document.getElementById('homes-guests-loves');
     const newDiv = document.createElement('div');
@@ -9,5 +9,3 @@ function addHotels(hotelInfo) {
                           <p class="hotel-location">${item.city}, ${item.country}</p>`;
   });
 }
-
-export default { addHotels };

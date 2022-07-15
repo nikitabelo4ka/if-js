@@ -1,4 +1,4 @@
-function addAgeSelect(numberOfChildrens) {
+export default function addAgeSelect(numberOfChildrens) {
   const childrenAgeSelect = document.createElement('select');
   const childrenAgeWrap = document.getElementsByClassName('children-age-wrap fil-el')[0];
   childrenAgeWrap.appendChild(childrenAgeSelect);
@@ -12,5 +12,3 @@ function addAgeSelect(numberOfChildrens) {
   }
   return numberOfChildrens + 1;
 }
-
-export default { addAgeSelect };
