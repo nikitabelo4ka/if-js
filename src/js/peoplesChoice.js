@@ -1,3 +1,5 @@
+import addAgeSelect from '../modules/addAgeSelect.js';
+
 const filtres = document.getElementById('filtres');
 
 const peoplesInput = document.getElementById('people-room');
@@ -81,21 +83,6 @@ filterInputs.forEach((item) => item.addEventListener('focusout', (event) => {
 
 let numberOfChildrens = 0;
 
-function addAgeSelect() {
-  const childrenAgeSelect = document.createElement('select');
-  const childrenAgeWrap = document.getElementsByClassName('children-age-wrap fil-el')[0];
-  childrenAgeWrap.appendChild(childrenAgeSelect);
-  childrenAgeSelect.className = 'select-children-age fil-el';
-  for (let i = 0; i < 18; i += 1) {
-    const optionOfSelect = document.createElement('option');
-    optionOfSelect.className = 'ageOption fil-el';
-    optionOfSelect.innerHTML = `${i} years old`;
-    optionOfSelect.setAttribute('value', i);
-    childrenAgeSelect.appendChild(optionOfSelect);
-  }
-  numberOfChildrens += 1;
-}
-
 document.getElementById('children-more').addEventListener('click', () => {
   if (numberOfChildrens === 0) {
     const childrenAgeWrap = document.createElement('div');
@@ -105,9 +92,9 @@ document.getElementById('children-more').addEventListener('click', () => {
     childrenAge.innerHTML = 'What is the age of the child you’re travelling with?';
     childrenAge.className = 'children-age-text fil-el';
     childrenAgeWrap.appendChild(childrenAge);
-    addAgeSelect();
+    numberOfChildrens = addAgeSelect(numberOfChildrens);
   } else if (numberOfChildrens < 10) {
-    addAgeSelect();
+    numberOfChildrens = addAgeSelect(numberOfChildrens);
   }
 });
 
@@ -147,7 +134,7 @@ childrenInput.addEventListener('focusout', () => {
     filtres.appendChild(childrenAgeWrap);
 
     for (let i = 0; i < childrenInputValue; i += 1) {
-      addAgeSelect();
+      numberOfChildrens = addAgeSelect(numberOfChildrens);
     }
   }
 });
